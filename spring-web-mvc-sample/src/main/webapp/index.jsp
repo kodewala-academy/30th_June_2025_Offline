@@ -52,6 +52,11 @@
         <h2>Zepto Login Page</h2>
         <a href="login">Login</a>
     </div>
+    
+    <div class="container">
+        <h2>Zepto Logout Page</h2>
+        <a href="logout">Logout</a>
+    </div>
 
 </body>
 </html>
