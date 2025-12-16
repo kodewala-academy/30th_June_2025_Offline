@@ -1,5 +1,7 @@
 package com.zepto.invoice.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +25,11 @@ public class InvoiceService {
 
 		entity = invoiceRepository.save(entity);
 		return entity.getInvId();
+	}
+
+	public List<InvoiceEntity> findInvoiceByStatus(String status) {
+		List<InvoiceEntity> invoices = invoiceRepository.findInvoiceByStatus(status);
+		return invoices;
 	}
 
 }
