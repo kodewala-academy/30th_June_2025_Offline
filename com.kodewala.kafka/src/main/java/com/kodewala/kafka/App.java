@@ -18,10 +18,10 @@ public class App {
 		KafkaProducer<String, String> producer = new KafkaProducer<>(props);
 
 		// 3. Create & Send Messages
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < 20; i++) {
 
-			ProducerRecord<String, String> record = new ProducerRecord<>("order", "Ord2" + i,
-					"Test ORDERRRRRRRRRRRRRRRRR " + i);
+			ProducerRecord<String, String> record = new ProducerRecord<>("payment", "pay" + i,
+					"Test Payment " + i);
 
 			producer.send(record);
 		}
