@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import com.ecom.product.search.SearchProductApplication;
+
 import com.ecom.product.search.entity.Product;
 import com.ecom.product.search.service.ProductService;
 
@@ -13,14 +13,11 @@ import com.ecom.product.search.service.ProductService;
 @RequestMapping("/api/products")
 public class ProductController {
 
-    private final SearchProductApplication searchProductApplication;
-
+   
 	@Autowired
 	ProductService productService;
 
-    ProductController(SearchProductApplication searchProductApplication) {
-        this.searchProductApplication = searchProductApplication;
-    }
+   
 
 	@GetMapping("/search")
 	public Product search(@RequestParam String name) {
